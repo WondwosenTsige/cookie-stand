@@ -14,10 +14,16 @@ var Seattle= {
 
    
     /* function getRandomIntInclusive(min, max) {
-        min = Math.ceil(min);
+        min = Math.ceil(min);                               //The maximum is inclusive and the minimum is inclusive 
         max = Math.floor(max);*/
-    return Math.floor(Math.random()*(this.maxCustomerPerHour-this.minCustomerPerHour +1) +this.minCustomerPerHour); //The maximum is inclusive and the minimum is inclusive 
+    return Math.floor(Math.random()*(this.maxCustomerPerHour-this.minCustomerPerHour +1) +this.minCustomerPerHour); 
 
+    },
+
+    getRandomCookies: function(){
+        for (var i=0; i<operationHours.length; i++){
+        var cookies = this.getCustomerPerHour() * this.avgCookieSale
+        this.cookiesPerHour.push(Math.round(cookies));
     }
-
-    
+    }
+}
