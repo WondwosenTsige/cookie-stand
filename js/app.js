@@ -14,7 +14,7 @@ var Seattle= {
 
    
     /* function getRandomIntInclusive(min, max) {
-        min = Math.ceil(min);                               //The maximum is inclusive and the minimum is inclusive 
+        min = Math.ceil(min);                               // Inclusive of both the minimum and the maximum.
         max = Math.floor(max);*/
     return Math.floor(Math.random()*(this.maxCustomerPerHour-this.minCustomerPerHour +1) +this.minCustomerPerHour); 
 
@@ -24,6 +24,8 @@ var Seattle= {
         for (var i=0; i<operationHours.length; i++){
         var cookies = this.getCustomerPerHour() * this.avgCookieSale
         this.cookiesPerHour.push(Math.round(cookies));
+        this.totalCookiesPerDay = this.totalCookiesPerDay + cookies;          // The short form an be -> this.totalCookiesPerDay+=cookies;
     }
-    }
+    },
+    
 }
