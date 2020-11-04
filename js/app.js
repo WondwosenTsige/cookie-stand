@@ -8,6 +8,7 @@ function getRandomIntInclusive(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random()*(max-min +1) +min);
 }
+
 var seattle = {
 
     city: 'Seattle',                    // Object literals for seattle
