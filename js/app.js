@@ -24,7 +24,7 @@ function Store (storeLocation, minCustomerPerHour, maxCustomerPerHour, avgCookie
   this.cookiesPerHour = 0;
   this.customerPerHour =[];
   Store.allStoreInfo.push(this);
-  this.getCookiesPerHour();
+  //this.getCookiesPerHour();
   
 };
 
@@ -46,10 +46,7 @@ Store.prototype.getCustomerPerHour = function () {
                 this.cookiesPerHour.push(Math.round(cookiesSoldEachHour));                              
                 this.totalCookiesPerDay = this.totalCookiesPerDay + Math.round (cookiesSoldEachHour); 
             
-            /*var cookiesSoldEachHour = this.customerPerHour[i] * this.avgCookiesSoldPerCustomer;
-            this.cookiesPerHour.push(Math.round(cookiesSoldEachHour));
-            this.cookiesPerHour+=cookiesSoldEachHour;                              
-            this.totalCookiesPerDay = this.totalCookiesPerDay + Math.round (cookiesSoldEachHour); */
+            
         }
 
 }
