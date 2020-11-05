@@ -1,5 +1,6 @@
 'use strict';
 
+
 function getRandomIntInclusive(min, max) {
 
     min = Math.ceil(min);
@@ -14,6 +15,8 @@ var tableContent = document.getElementById("Store-list-table");
 
 Store.allStoreInfo = [];
 
+Store.totalSales = 0;
+
 function Store (storeLocation, minCustomerPerHour, maxCustomerPerHour, avgCookiesSoldPerCustomer) {
   
   this.storeLocation = storeLocation;
@@ -24,7 +27,7 @@ function Store (storeLocation, minCustomerPerHour, maxCustomerPerHour, avgCookie
   this.cookiesPerHour = [];
   this.customerPerHour =[];
   Store.allStoreInfo.push(this);
-
+  this.getCookiesPerHour();  
   
 };
 
@@ -47,10 +50,32 @@ Store.prototype.getCustomerPerHour = function () {
 
 }
 
-var seattle = new Store('Seattle', 23, 65, 6.3);
+var renderRowHeader = function() {
+var tableRowElement = document.createElement('tr');
+var tableHeaderElement = document.createElement('th');
+tableRowElement.appendChild(tableHeaderElement);
+
+for (var i=0; i<operationHours.length; i++){
+    var tabledataElement = document.createElement('td');
+    tabledataElement.textContent = operationHours[i];
+    tableRowElement.appendChild(tabledataElement);
+}
+
+var tdElm = document.createElement('td');
+tdElm.textContent = 'Total';
+tableRowElement.appendChild(tdElm);
+tableContent.appendChild(tableRowElement);
+
+};
+
+
+renderRowHeader();
+
+/*var seattle = new Store('Seattle', 23, 65, 6.3);
 seattle.getCustomerPerHour();
 seattle.getCookiesPerHour();
 
 var tokyo = new Store('Tokyo', 28, 71, 4.3);
 tokyo.getCustomerPerHour();
-tokyo.getCookiesPerHour();
+tokyo.getCookiesPerHour();*/
+
