@@ -72,6 +72,24 @@ tableRowElement.appendChild(tabledataElement);
 
 };
 
+function generateHeaderRow (){
+tableContent = document.getElementById('Store-list-table');
+
+var tableRowElement = document.createElement('tr');
+tableContent.appendChild(tableRowElement);
+
+var tableHeaderElement = document.createElement('th');
+tableHeaderElement.textContent = 'Location';
+tableRowElement.appendChild(tableHeaderElement);
+
+for (var i=0; i<operationHours.length; i++);{
+  tableHeaderElement = document.createElement('th');
+  tableHeaderElement.textContent = operationHours[i];
+  tableRowElement.appendChild(tableHeaderElement);
+}
+
+}
+
 
 new Store('Seattle', 23, 65, 6.3);
 new Store('Tokyo', 3, 24, 1.2);
