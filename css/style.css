@@ -12,22 +12,30 @@ td:nth-child(5) { background: hsl(190, 90%, 50%); }
 td:nth-child(6) { background: hsl(200, 99%, 50%); }
 #Store-list-table*/
 
+
 body {
     padding: 1rem;
     font: normal medium/2 sans-serif;
 }
 
+h1 {
+
+    font-size: x-large;
+    padding: 2rem;
+}
+
 td, th {
     width: 4rem;
     height: 2rem;
-    border: 1px solid #ccc;
+    border: 4px solid #999;
     text-align: center;
-    
+    padding: 0.5rem;
+    border-color: white;
     background-color: aqua;
   }
   th {
     background: hsl(150, 50%, 50%);
-        border-color: white;
+       
   }
   
 
