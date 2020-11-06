@@ -1,0 +1,34 @@
+
+
+/*td, th {
+    border: 1px solid #999;
+    padding: 0.5rem;
+  }
+  td:nth-child(1) { background: hsl(150, 50%, 50%); }
+ /* td:nth-child(2) { background: hsl(160, 60%, 50%); }
+td:nth-child(3) { background: hsl(170, 70%, 50%); }
+td:nth-child(4) { background: hsl(180, 80%, 50%); }
+td:nth-child(5) { background: hsl(190, 90%, 50%); }
+td:nth-child(6) { background: hsl(200, 99%, 50%); }
+#Store-list-table*/
+
+body {
+    padding: 1rem;
+    font: normal medium/2 sans-serif;
+}
+
+td, th {
+    width: 4rem;
+    height: 2rem;
+    border: 1px solid #ccc;
+    text-align: center;
+    
+    background-color: aqua;
+  }
+  th {
+    background: hsl(150, 50%, 50%);
+        border-color: white;
+  }
+  
+
+  td:nth-child(1) { background: hsl(150, 50%, 50%); }
