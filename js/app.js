@@ -80,7 +80,7 @@ function generateHeaderRow() {
   tableContent.appendChild(tableRowElement);
 
   var tableHeaderElement = document.createElement('th');
-  tableHeaderElement.textContent = 'Location';
+  //tableHeaderElement.textContent = 'Location';
   tableRowElement.appendChild(tableHeaderElement);
 
   for (var i = 0; i < operationHours.length; i++) {
