@@ -57,7 +57,7 @@ Store.prototype.render = function () {
   var tableRowElement = document.createElement('tr');
   tableContent.appendChild(tableRowElement);
 
-  var tableDataElement = document.createElement('td');
+  tableDataElement = document.createElement('td');
   tableDataElement.textContent = this.storeLocation;
   tableRowElement.appendChild(tableDataElement);
 
@@ -90,8 +90,8 @@ function generateHeaderRow() {
   }
 
   var tableDataElement = document.createElement('th');
-    tableDataElement.textContent = 'Total';
-    tableRowElement.appendChild(tableDataElement);
+  tableDataElement.textContent = 'Total';
+  tableRowElement.appendChild(tableDataElement);
 
   new Store('Seattle', 23, 65, 6.3);
   new Store('Tokyo', 3, 24, 1.2);
@@ -102,7 +102,7 @@ function generateHeaderRow() {
 }
 function generateFooterRow() {
 
-  tableContent = document.getElementById('Store-list-table');
+  //tableContent = document.getElementById('Store-list-table');
   var tableRowElement = document.createElement('tr');
   tableContent.appendChild(tableRowElement);
 
@@ -119,7 +119,7 @@ function generateFooterRow() {
       totalSales += allStoreInfo[j].cookiesPerHour[i];
     }
 
-    var tableDataElement = document.createElement('td');
+    tableDataElement = document.createElement('td');
     tableDataElement.textContent = hourlyTotal;
     tableRowElement.appendChild(tableDataElement);
 
@@ -127,9 +127,9 @@ function generateFooterRow() {
 
   }
 
-  var tableDataElement = document.createElement('td');
-    tableDataElement.textContent = totalSales;
-    tableRowElement.appendChild(tableDataElement);
+  tableDataElement = document.createElement('td');
+  tableDataElement.textContent = totalSales;
+  tableRowElement.appendChild(tableDataElement);
 }
 
 generateHeaderRow();
