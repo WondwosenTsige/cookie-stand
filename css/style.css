@@ -16,6 +16,7 @@ td:nth-child(6) { background: hsl(200, 99%, 50%); }
 body {
     padding: 1rem;
     font: normal medium/2 sans-serif;
+    
 }
 
 h1 {
@@ -40,3 +41,40 @@ td, th {
   
 
   td:nth-child(1) { background: hsl(150, 50%, 50%); }
+
+html{
+  background-color: rgb(204, 199, 204);
+}
+
+#title{
+  font-style: italic;
+  font-size: 75px;
+  background-color: brown;
+  text-align: center;
+}
+
+#Salespage{
+  font-size: 35px;
+  font-weight: bold;
+  float: right;
+
+}
+
+
+#seattle #dubai #tokyo{
+  text-decoration: rgb(161, 122, 14);
+}
+
+h3{
+  background-color: blue;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+
+#legal{
+  text-align: center;
+  color: red;
+  background-color: black;
+  cursor: pointer;
+}
