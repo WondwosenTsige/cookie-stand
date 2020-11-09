@@ -145,41 +145,59 @@ for (var i = 0; i < allStoreInfo.length; i++) {
 }
 generateFooterRow();
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var addStore = document.getElementById('add-a-store');
 addStore.addEventListener('submit',handleSubmit);
+
 function handleSubmit(event){
   event.preventDefault();
   console.log('clicked');
 
-  var minCust = event.target.mincustomer.value;
-  var maxCust = event.target.maxcustomer.value;
-  var avgCookie = event.target.avgcookiepercus.value;
-  var location = event.target.location.value;
+  var minCustomerPerHour = event.target.minCustomer.value;
+  var maxCustomerPerHour = event.target.maxCustomer.value;
+  var avgCookiesPurchasedPerCustomer = event.target.avgCookiesSold.value;
+  var storeLocation = event.target.location.value;
 
-  /*if (minCust < 0){
-    return alert('It has to be a postive number');
-  }
-  if (maxCust < 0){
-    return alert('It has to be a postive number');
-  }
-  if (avgCookie < 0){
-    return alert('It has to be a postive number');
-  }
-  if (location === Number ){
-    return alert('It has to be a string');
-  }
-  if(minCust > maxCust){
-    return alert('minimum must be less than maximum');
-  }
-  if(maxCust < minCust){
-    return alert('maximum must be greater than maximum');
-  }*/
+  addStore.reset();
+
+  new Store(storeLocation, minCustomerPerHour, maxCustomerPerHour, avgCookiesPurchasedPerCustomer);
+  document.getElementById("Store-list-table").innerHTML = '';
   
+  generateHeaderRow();
+  for(var i=0; i<allStoreInfo.length; i++){
+    allStoreInfo[i].getCustomerPerHour();
+    allStoreInfo[i].getCookiesPerHour();
+    allStoreInfo[i].render();
 
-  new Store(location, minCust, maxCust, avgCookie);
+
+  }
+
   generateFooterRow();
 
 }
+
+/*generateHeaderRow();
+for(var i=0; i<allStoreInfo.length; i++){
+  allStoreInfo[i].getCustomerPerHour();
+  allStoreInfo[i].getCookiesPerHour();
+  allStoreInfo[i].render();
+}*/
+
+//generateFooterRow();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
